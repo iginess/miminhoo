@@ -1,65 +1,173 @@
+
 <!DOCTYPE html>
 <html lang="pt">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>para ti ❤️</title>
+<title>um miminho para ti ♡</title>
+
 <style>
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background: #fce9ed;
+  background: linear-gradient(135deg, #eaf5fc, #d9ecf9, #f8fcff);
   font-family: Georgia, serif;
+  color: #173b63;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  padding: 20px;
-  box-sizing: border-box;
-  color: #704653;
+  padding: 25px;
 }
-.carta {
-  background: #fffaf8;
+
+.container {
+  width: 100%;
   max-width: 550px;
-  padding: 35px;
-  border-radius: 20px;
-  box-shadow: 0 5px 25px #d9aab5;
-  line-height: 1.8;
 }
+
+.card {
+  background: #f8fcff;
+  padding: 45px 30px;
+  border-radius: 25px;
+  text-align: center;
+  border: 1px solid #cde7f7;
+  box-shadow: 0 15px 40px rgba(23,59,99,0.12);
+}
+
+.heart {
+  font-size: 45px;
+  color: #8ec5e8;
+}
+
+.small {
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #8baecb;
+}
+
 h1 {
-  text-align: center;
-  color: #c16d83;
+  font-size: 48px;
+  font-weight: normal;
+  line-height: 1.1;
+  color: #173b63;
 }
-.coracao {
+
+button {
+  background: #8ec5e8;
+  color: #173b63;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 30px;
+  margin-top: 15px;
+  font-size: 15px;
+  font-family: Georgia, serif;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #6eadd7;
+  transform: translateY(-3px);
+}
+
+.hidden {
+  display: none;
+}
+
+#carta {
+  margin-top: 30px;
+  text-align: left;
+  line-height: 1.9;
+  font-size: 15px;
+  color: #405d76;
+  animation: aparecer 1s ease;
+}
+
+h2 {
   text-align: center;
-  font-size: 30px;
+  font-weight: normal;
+  color: #315f89;
+  font-size: 23px;
+}
+
+.final {
+  text-align: center;
+  color: #315f89;
+  font-size: 16px;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 </style>
 </head>
+
 <body>
-<div class="carta">
-<h1>para ti ❤️</h1>
-<div class="coracao">♡</div>
 
-<p>queria deixar-te aqui um textinho para leres quando acordares, porque gosto de te mimar de vez em quando. espero que tenhas tido uma noite descansada e que tenhas acordado bem, com um sorriso nessa cara sexy, e pronto pra me aturares mais um dia.</p>
+<div class="container">
+  <div class="card">
 
-<p>quero que saibas que gosto mesmo muito de ti e que estou muito feliz por te ter conhecido. adoro a tua maneira de ser, a nossa maneira de sermos tao iguais, as nossas conversas, as nossas brincadeiras e a facilidade que temos em ser nos proprios um com o outro. gosto de estar contigo, de te ouvir, de rir contigo, de tudo oque faco contigo. sinceramente, adoro cada bocadinho que passo contigo e adoro te a ti.</p>
+    <span class="heart">♡</span>
+    <p class="small">uma coisinha para ti</p>
 
-<p>e mesmo que, por enquanto, seja tudo online e ainda nao possamos estar juntos como gostariamos, nao mudava por nada a maneira como te conheci. se tivesse de voltar atras e conhecer-te outra vez, escolheria exatamente a mesma forma, porque foi assim que apareceste na minha vida e nao podia estar mais contente por isso. claro que tenho muita vontade de te conhecer pessoalmente e de viver muito mais coisas contigo, mas nao trocava o inicio da nossa historia por outro.</p>
+    <h1>um miminho<br>para ti</h1>
 
-<p>sei que ja falamos sobre preferires acoes a palavras e eu percebo perfeitamente o teu lado. tambem quero que consigas sentir aquilo que te digo atraves das minhas atitudes, nos pequenos gestos, na atencao, no carinho e na vontade que tenho de estar contigo.</p>
+    <p>espero que tenhas dormido bem ♡</p>
 
-<p>mas tambem gostava que tentasses perceber o meu lado. quando te digo que gosto de ti, que es importante para mim ou que quero continuar a conhecer-te, e porque e mesmo isso que sinto. nao tenho necessidade nenhuma de te mentir ou de brincar com os teus sentimentos. sei que a confianca nao vai aparecer de um dia para o outro, mas gostava que me desses tempo para te mostrar que podes confiar em mim.</p>
+    <button onclick="abrirCarta()" id="botao">
+      abre-me ♡
+    </button>
 
-<p>nao te quero pressionar com nada, muito menos com o futuro. sei que ainda temos muito para descobrir um sobre o outro e quero mesmo aproveitar esta fase, conhecer cada vez mais partes tuas, viver coisas novas contigo, criar memorias, e ter muitos mais momentos nossos.</p>
+    <div id="carta" class="hidden">
 
-<p>gosto de ti pelo que es, gosto da maneira como me sinto contigo e gosto daquilo que estamos a construir. nao sei exatamente onde isto nos vai levar, mas sei que tenho vontade de continuar a descobrir. quero que te sintas bem comigo, que sejas sempre tu proprio e que nunca sintas que tens de ser diferente para gostarem de ti, muito menos comigo.</p>
+      <h2>ola parvinho.</h2>
 
-<p>e desculpa se as vezes faco comentarios ou tenho atitudes de que nao gostas. nunca e minha intencao deixar-te desconfortavel ou magoar-te. quero melhorar essas pequenas coisas, aprender contigo e ter cada vez mais atencao aquilo que sentes, porque gosto mesmo de ti e quero que te sintas bem comigo.</p>
+      <p>queria deixar-te aqui um textinho para leres quando acordares, porque gosto de te mimar de vez em quando. espero que tenhas tido uma noite descansada e que tenhas acordado bem, com um sorriso nessa cara sexy, e pronto pra me aturares mais um dia.</p>
 
-<p style="text-align:center; margin-top:30px;">
-gosto muito de ti, seu chatinho. <br>
-<span style="font-size:28px;">♡</span>
-</p>
+      <p>quero que saibas que gosto mesmo muito de ti e que estou muito feliz por te ter conhecido. adoro a tua maneira de ser, a nossa maneira de sermos tao iguais, as nossas conversas, as nossas brincadeiras e a facilidade que temos em ser nos proprios um com o outro. gosto de estar contigo, de te ouvir, de rir contigo, de tudo oque faco contigo. sinceramente, adoro cada bocadinho que passo contigo e adoro te a ti.</p>
+
+      <p>e mesmo que, por enquanto, seja tudo online e ainda nao possamos estar juntos como gostariamos, nao mudava por nada a maneira como te conheci. se tivesse de voltar atras e conhecer-te outra vez, escolheria exatamente a mesma forma, porque foi assim que apareceste na minha vida e nao podia estar mais contente por isso. claro que tenho muita vontade de te conhecer pessoalmente e de viver muito mais coisas contigo, mas nao trocava o inicio da nossa historia por outro.</p>
+
+      <p>sei que ja falamos sobre preferires acoes a palavras e eu percebo perfeitamente o teu lado. tambem quero que consigas sentir aquilo que te digo atraves das minhas atitudes, nos pequenos gestos, na atencao, no carinho e na vontade que tenho de estar contigo.</p>
+
+      <p>mas tambem gostava que tentasses perceber o meu lado. quando te digo que gosto de ti, que es importante para mim ou que quero continuar a conhecer-te, e porque e mesmo isso que sinto. nao tenho necessidade nenhuma de te mentir ou de brincar com os teus sentimentos. sei que a confianca nao vai aparecer de um dia para o outro, mas gostava que me desses tempo para te mostrar que podes confiar em mim.</p>
+
+      <p>nao te quero pressionar com nada, muito menos com o futuro. sei que ainda temos muito para descobrir um sobre o outro e quero mesmo aproveitar esta fase, conhecer cada vez mais partes tuas, viver coisas novas contigo, criar memorias, e ter muitos mais momentos nossos.</p>
+
+      <p>gosto de ti pelo que es, gosto da maneira como me sinto contigo e gosto daquilo que estamos a construir. nao sei exatamente onde isto nos vai levar, mas sei que tenho vontade de continuar a descobrir. quero que te sintas bem comigo, que sejas sempre tu proprio e que nunca sintas que tens de ser diferente para gostarem de ti, muito menos comigo.</p>
+
+      <p>e desculpa se as vezes faco comentarios ou tenho atitudes de que nao gostas. nunca e minha intencao deixar-te desconfortavel ou magoar-te. quero melhorar essas pequenas coisas, aprender contigo e ter cada vez mais atencao aquilo que sentes, porque gosto mesmo de ti e quero que te sintas bem comigo.</p>
+
+      <p class="final">gosto muito de ti, seu chatinho. &lt;3</p>
+
+      <p class="final">
+        ainda temos tantas coisas para viver...<br>
+        e isto e so o inicio. ♡
+      </p>
+
+      <p style="text-align:center;font-size:30px;color:#8ec5e8;">♡</p>
+
+    </div>
+  </div>
 </div>
+
+<script>
+function abrirCarta() {
+  document.getElementById("carta").classList.remove("hidden");
+  document.getElementById("botao").style.display = "none";
+}
+</script>
+
 </body>
 </html>
